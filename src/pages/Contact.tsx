@@ -111,7 +111,7 @@ const Contact = ({ setPage }: Props) => {
                     align="flex-start"
                     spacing={2}
                     w="full"
-                    direction={{ base: "column", md: "row" }}
+                    flexDirection={{ base: "column", md: "row" }}
                     overflowX="visible"
                   >
                     <VStack
