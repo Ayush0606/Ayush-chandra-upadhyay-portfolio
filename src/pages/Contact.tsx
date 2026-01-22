@@ -4,7 +4,6 @@ import {
   useToast,
   HStack,
   VStack,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Formik, Form } from "formik";
 import { useState, useEffect } from "react";
@@ -27,7 +26,6 @@ const Contact = ({ setPage }: Props) => {
   const toast = useToast();
   const [totalLines, setTotalLines] = useState(14);
   const [messageLines, setMessageLines] = useState(1);
-  const isMobile = useBreakpointValue({ base: true, md: false });
   const [loading, setLoading] = useState(false);
 
   const initialValues: FormValues = {
