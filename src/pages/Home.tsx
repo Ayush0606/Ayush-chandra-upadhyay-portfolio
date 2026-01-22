@@ -63,20 +63,21 @@ const Home = ({ setPage }: Props) => {
       justify="space-around"
       align="center"
       direction={{ base: "column-reverse", lg: "row" }}
-      px={{ base: 4, md: 8 }}
-      py={{ base: 8, md: 0 }}
-      gap={{ base: 8, md: 16 }}
+      px={{ base: 3, sm: 4, md: 8 }}
+      py={{ base: 6, sm: 8, md: 0 }}
+      gap={{ base: 6, sm: 8, md: 16 }}
     >
       <VStack
         alignItems={{ base: "center", lg: "flex-start" }}
         justify="center"
-        spacing={4}
+        spacing={{ base: 3, md: 4 }}
         animation={`${fadeIn} 0.5s ease-out`}
         color={textColor}
+        w="full"
       >
-        <Box textAlign={{ base: "center", lg: "left" }}>
+        <Box textAlign={{ base: "center", lg: "left" }} w="full">
           <Text
-            fontSize={{ base: "2xl", md: "4xl" }}
+            fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
             fontWeight="bold"
             letterSpacing="wide"
             color={headingColor}
@@ -84,10 +85,10 @@ const Home = ({ setPage }: Props) => {
             Ayush Chandra Upadhyay
           </Text>
           <Text
-            fontSize={{ base: "lg", md: "xl" }}
+            fontSize={{ base: "sm", sm: "md", md: "xl" }}
             fontWeight="bold"
             color={accentColor}
-            mb={{ base: 6, md: 10 }}
+            mb={{ base: 4, sm: 6, md: 10 }}
           >
             Full Stack Developer | MERN | Open Source Enthusiast | 
           </Text>
@@ -98,7 +99,7 @@ const Home = ({ setPage }: Props) => {
         {renderSection(homeData.social)}
       </VStack>
 
-      <Box position="relative" animation={`${fadeIn} 0.5s ease-out`}>
+      <Box position="relative" animation={`${fadeIn} 0.5s ease-out`} w="full" display="flex" justifyContent="center">
         <Box
           position="absolute"
           inset="0"
@@ -109,7 +110,7 @@ const Home = ({ setPage }: Props) => {
         />
         <Image
           src={homeData.myImage}
-          width={{ base: "250px", sm: "300px", md: "400px", lg: "425px" }}
+          width={{ base: "200px", sm: "250px", md: "400px", lg: "425px" }}
           height="auto"
           borderRadius="15%"
           border="4px solid"

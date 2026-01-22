@@ -19,9 +19,9 @@ const Projects = ({ setPage }: Props) => {
 
   return (
     <SimpleGrid
-      columns={{ sm: 1, md: 2, lg: 3 }}
-      padding={10}
-      spacing={6}
+      columns={{ base: 1, sm: 1, md: 2, lg: 3 }}
+      padding={{ base: 4, sm: 6, md: 8, lg: 10 }}
+      spacing={{ base: 4, md: 6 }}
       minWidth={"100%"}
       maxH={"100%"}
       animation={`${fadeIn} 0.5s ease-out`}

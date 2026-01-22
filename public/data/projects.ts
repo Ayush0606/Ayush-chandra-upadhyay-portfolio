@@ -81,4 +81,37 @@ export const projects = [
     Source: "https://github.com/Ayush0606/GYM-Landing-page",
     Demo:"https://ayush0606.github.io/GYM-Landing-page/"
   },
+  {
+    ImageURL: "/assets/gigflow.png",
+    Title: "Gigflow",
+    Description:
+      "A modern freelance marketplace platform where clients can post gigs and freelancers can bid, hire, and collaborate in real time. It streamlines job posting, bidding, and secure hiring with an intuitive frontend interface.",
+    Technologies: [
+      "react",
+      "javascript",
+      "tailwind",
+      "responsive",
+      "node",
+      "express",
+      "mongodb",
+    ],
+    Source: "https://github.com/Ayush0606/Gigflow",
+    Demo: "https://gigflow-frontend.netlify.app/",
+  },
+  {
+    ImageURL: "/assets/reaidy.png",
+    Title: "Reaidy",
+    Description:
+      "An AI-powered finance advisor web app that helps users track and visualize their financial data with personalized budgeting insights. It offers intuitive tools for expense management and tailored financial guidance.",
+    Technologies: [
+      "react",
+      "javascript",
+      "tailwind",
+      "responsive",
+      "AI",
+      "data visualization",
+    ],
+    Source: "https://github.com/Ayush0606/reaidy",
+    Demo: "https://reaidy-seven.vercel.app/",
+  },
 ];

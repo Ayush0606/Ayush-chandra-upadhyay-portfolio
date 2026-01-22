@@ -58,11 +58,11 @@ const Project = ({
         borderBottom="1px solid"
         borderBottomColor={borderColor}
       />
-      <VStack align="left" width="100%" padding={5} height="100%" spacing={3}>
-        <Text fontWeight="bold" fontSize="lg" color={textColor}>
+      <VStack align="left" width="100%" padding={{ base: 3, md: 5 }} height="100%" spacing={3}>
+        <Text fontWeight="bold" fontSize={{ base: "md", md: "lg" }} color={textColor}>
           {Title}
         </Text>
-        <Text color={secondaryText} fontSize="sm">
+        <Text color={secondaryText} fontSize={{ base: "xs", md: "sm" }}>
           {Description}
         </Text>
         <HStack wrap="wrap" spacing={2} marginY={2}>

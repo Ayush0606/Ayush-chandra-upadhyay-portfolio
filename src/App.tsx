@@ -17,14 +17,16 @@ function App() {
   return (
     <Grid
       templateAreas={{
-        base: `"tool tool" "activity main" "footer footer"`,
+        base: `"tool" "activity" "main" "footer"`,
+        sm: `"tool tool" "activity main" "footer footer"`,
         lg: `"tool tool tool" "activity explorer main" "footer footer footer"`,
       }}
       templateColumns={{
-        base: "40px 1fr",
+        base: "1fr",
+        sm: "40px 1fr",
         lg: "70px 250px 1fr",
       }}
-      templateRows="auto 1fr auto"
+      templateRows="auto auto 1fr auto"
       height="100vh"
     >
       <GridItem area="tool" marginTop={2}>

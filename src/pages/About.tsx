@@ -44,14 +44,14 @@ const About = ({ setPage }: Props) => {
     <VStack
       alignItems="left"
       justify="center"
-      padding={{ base: "5", md: "10" }}
-      spacing={8}
+      padding={{ base: "4", sm: "6", md: "10" }}
+      spacing={{ base: 6, md: 8 }}
       animation={`${fadeIn} 0.5s ease-out`}
     >
       <Box>
         <Heading
           as="h1"
-          fontSize={{ base: "2xl", md: "4xl" }}
+          fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
           fontWeight="bold"
           color="#0BCEAF"
           mb={4}
@@ -61,7 +61,7 @@ const About = ({ setPage }: Props) => {
         {aboutMe.description.map((text, idx) => (
           <Text
             key={idx}
-            fontSize={{ base: "lg", md: "xl" }}
+            fontSize={{ base: "sm", sm: "md", md: "xl" }}
             mb={idx === 0 ? 6 : 0}
             lineHeight="tall"
           >
@@ -72,7 +72,7 @@ const About = ({ setPage }: Props) => {
 
       <Button
         marginTop={6}
-        width="200px"
+        width={{ base: "100%", sm: "200px" }}
         background="#0BCEAF"
         onClick={downloadCV}
         _hover={{ background: "#09a88d" }}
@@ -88,9 +88,9 @@ const About = ({ setPage }: Props) => {
       <Box width="100%">
         <Heading
           as="h2"
-          fontSize={{ base: "xl", md: "2xl" }}
+          fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
           fontWeight="bold"
-          mb={8}
+          mb={6}
           color="#0BCEAF"
         >
           Technical Expertise
@@ -98,17 +98,18 @@ const About = ({ setPage }: Props) => {
         <Grid
           templateColumns={{
             base: "1fr",
+            sm: "repeat(2, 1fr)",
             md: "repeat(2, 1fr)",
             lg: "repeat(3, 1fr)",
           }}
-          gap={8}
+          gap={{ base: 4, md: 8 }}
         >
           {Object.entries(technicalSkills).map(([category, skills]) => (
             <GridItem
               key={category}
               bg="whiteAlpha.50"
               borderRadius="xl"
-              p={6}
+              p={{ base: 4, md: 6 }}
               boxShadow="sm"
               _hover={{
                 transform: "translateY(-2px)",
@@ -116,14 +117,14 @@ const About = ({ setPage }: Props) => {
               }}
               transition="all 0.3s"
             >
-              <Text fontWeight="bold" fontSize="lg" color="#0BCEAF" mb={4}>
+              <Text fontWeight="bold" fontSize={{ base: "md", md: "lg" }} color="#0BCEAF" mb={4}>
                 {category}
               </Text>
-              <VStack align="start" spacing={3}>
+              <VStack align="start" spacing={2}>
                 {skills.map((skill) => (
                   <HStack key={skill} spacing={3} width="100%">
                     <Box w="2" h="2" borderRadius="full" bg="#0BCEAF" />
-                    <Text fontSize="md">{skill}</Text>
+                    <Text fontSize={{ base: "sm", md: "md" }}>{skill}</Text>
                   </HStack>
                 ))}
               </VStack>

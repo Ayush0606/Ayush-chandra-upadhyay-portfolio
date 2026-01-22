@@ -98,23 +98,27 @@ const Contact = ({ setPage }: Props) => {
                   align="flex-start"
                   w="full"
                   justify={{ md: "space-between" }}
+                  spacing={{ base: 4, md: 0 }}
                 >
-                  <HStack
-                    align="flex-start"
-                    spacing={2}
-                    w="full"
-                    overflowX={isMobile ? "auto" : "visible"}
-                  >
+                  <Box w="full" display={{ base: "none", md: "block" }}>
                     <ContactCodeLines
                       totalLines={totalLines}
                       errorLines={Object.keys(errorMap).map(Number)}
                       errorMessages={errorMap}
                     />
-
+                  </Box>
+                  <HStack
+                    align="flex-start"
+                    spacing={2}
+                    w="full"
+                    direction={{ base: "column", md: "row" }}
+                    overflowX="visible"
+                  >
                     <VStack
                       align="stretch"
                       w="full"
-                      minW={isMobile ? "300px" : "auto"}
+                      minW="auto"
+                      px={{ base: 4, md: 0 }}
                     >
                       <ContactDetails />
                       <ContactForm
@@ -131,8 +135,10 @@ const Contact = ({ setPage }: Props) => {
                     bg="#0BCEAF"
                     color="white"
                     _hover={{ bg: "#09a88d" }}
-                    mt={4}
-                    ml={4}
+                    mt={{ base: 4, md: 4 }}
+                    ml={{ base: 0, md: 4 }}
+                    w={{ base: "full", md: "auto" }}
+                    px={{ base: 8, md: 6 }}
                     isLoading={loading}
                     loadingText="Sending..."
                   >

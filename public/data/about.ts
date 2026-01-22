@@ -2,8 +2,8 @@ export const aboutMe = {
   description: [
    "I’m Ayush, a final-year ECE student at MMMUT and a passionate Full Stack Developer with expertise in the MERN stack. I have strong problem-solving skills in DSA and hands-on experience in building scalable web and mobile applications using React Native and modern technologies."
   ],
-  cvPath: "/assets/CV.pdf", // Upload your own CV in /public/assets as CV.pdf
-  cvFileNameAfterDownload: "Ayush_chandra_upadhyay CV.pdf", // This is what the name of the file is going to be when downloaded
+  cvPath: "/assets/resume%20(24).pdf", // Upload your own CV in /public/assets as CV.pdf
+  cvFileNameAfterDownload: "Ayush_chandra_upadhyay_Resume.pdf", // This is what the name of the file is going to be when downloaded
 };
 
 export const technicalSkills: Record<string, string[]> = {
